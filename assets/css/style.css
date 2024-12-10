@@ -39,11 +39,15 @@ a{color: var(--c_primary);}
 a:hover{color: var(--c_secondary);}
 a .fa-arrow-right,
 a .fa-circle-chevron-right{
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 a:hover .fa-arrow-right,
 a:hover .fa-circle-chevron-right{
-  transform: translateX(3px);
+  -webkit-transform: translateX(3px);
+      -ms-transform: translateX(3px);
+          transform: translateX(3px);
 }
 .c_primary{color: var(--c_primary);}
 .c_secondary{color: var(--c_secondary);}
@@ -127,6 +131,8 @@ a:hover .fa-circle-chevron-right{
   padding: 1rem 0rem;
   background-color: var(--bg_white);
   border-bottom: 1px solid var(--bs-border-color);
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 .scrolled_header .header{
@@ -298,7 +304,8 @@ a:hover .fa-circle-chevron-right{
 .footer-logo{
   width: 10rem;
   height: 3.3125rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 /* ... end footer section ... */
 /* _____________________ end home page _____________________ */
@@ -307,7 +314,8 @@ a:hover .fa-circle-chevron-right{
 .member_photo{
   width: 11.25rem;
   height: 11.25rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
 }
 /* _____________________ end team page _____________________ */
@@ -321,7 +329,8 @@ a:hover .fa-circle-chevron-right{
 }
 .step_photo{
   max-width: 80%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
 }
 
@@ -343,7 +352,10 @@ a:hover .fa-circle-chevron-right{
 }
 @media(min-width:768px){
   .step_item:nth-of-type(2n+2)>.row{
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 @media(max-width:767.98px){
