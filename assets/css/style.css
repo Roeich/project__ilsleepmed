@@ -37,6 +37,14 @@ h1,h2,h3,h4,h5,h6{
 }
 a{color: var(--c_primary);}
 a:hover{color: var(--c_secondary);}
+a .fa-arrow-right,
+a .fa-circle-chevron-right{
+  transition: 0.3s;
+}
+a:hover .fa-arrow-right,
+a:hover .fa-circle-chevron-right{
+  transform: translateX(3px);
+}
 .c_primary{color: var(--c_primary);}
 .c_secondary{color: var(--c_secondary);}
 .c_black{color: var(--c_black);}
@@ -122,7 +130,7 @@ a:hover{color: var(--c_secondary);}
   transition: background-color 0.3s;
 }
 .scrolled_header .header{
-  /* background-color: var(--bg_secondary); */
+  background-color: var(--bg_secondary);
 }
 .header_logo {
   width: 6.25rem;
@@ -223,6 +231,9 @@ a:hover{color: var(--c_secondary);}
 .hero-section-1{
   padding: 5rem 0rem 9rem;
 }
+.hero-section-2{
+  padding: 7rem 0rem;
+}
 .hero-section-1::after{
   content: "";
   left: 0;
@@ -290,6 +301,58 @@ a:hover{color: var(--c_secondary);}
   object-fit: contain;
 }
 /* ... end footer section ... */
+/* _____________________ end home page _____________________ */
+
+/* _____________________ start team page _____________________ */
+.member_photo{
+  width: 11.25rem;
+  height: 11.25rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* _____________________ end team page _____________________ */
+
+/* _____________________ start treatment page _____________________ */
+.steps-section{
+  padding: 5rem 0rem 3.75rem;
+}
+.step_item{
+  margin-bottom: 2rem;
+}
+.step_photo{
+  max-width: 80%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.insurance-section{
+  position: relative;
+  padding: 8rem 0rem 5rem;
+}
+.insurance-section::after{
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIwIDE1MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGcgZmlsbD0iI2Y4ZjVlZSIgZmlsbC1ydWxlPSJub256ZXJvIj48cGF0aCBkPSJNMTkyMCA1Ny41OWMtMTcxLjgyMSA0Ny4wMDgtMzAwLjM1NCA2My4zOTYtMzg1LjU5OCA0OS4xNjItMTI3Ljg2Ny0yMS4zNS0yNTUuNzM0LTY0LjA1MS0zODMuNi00OS43NzMtMTI3Ljg2OCAxMy43NDQtMjU1LjczNCA4NS44MDItMzgzLjYwMSA5Mi40NzQtMTI3Ljg2NyA2LjY3Mi0yNTUuNzM0LTQ5LjM3My0zODMuNi03OC4zM0MyNTUuNzMzIDQyLjcwMiAxMjcuODY2IDQyLjcwMiA2My45MzIgNDIuNzAyTDAgMzdWMGgxOTIwdjU3LjU5eiIgb3BhY2l0eT0iLjE0OSIvPjxwYXRoIGQ9Ik0wIDU3LjU5YzE3MS44MjEgNDcuMDA4IDMwMC4zNTQgNjMuMzk2IDM4NS41OTggNDkuMTYyIDEyNy44NjctMjEuMzUgMjU1LjczNC02NC4wNTEgMzgzLjYtNDkuNzczIDEyNy44NjggMTMuNzQ0IDI1NS43MzQgODUuODAyIDM4My42MDEgOTIuNDc0IDEyNy44NjcgNi42NzIgMjU1LjczNC00OS4zNzMgMzgzLjYtNzguMzMgMTI3Ljg2Ny0yOC40MjIgMjU1LjczNC0yOC40MjIgMzE5LjY2OC0yOC40MjJIMTkyMFYwSDB2NTcuNTl6IiBvcGFjaXR5PSIuMjk2Ii8+PHBhdGggZD0iTTAgMzhjMTcxLjgyMSAzMS4wMzIgMzAwLjM1NCA0MS44NSAzODUuNTk4IDMyLjQ1NyAxMjcuODY3LTE0LjA5MiAyNTUuNzM0LTQyLjI3NCAzODMuNi0zMi44NSAxMjcuODY4IDkuMDcgMjU1LjczNCA1Ni42MjkgMzgzLjYwMSA2MS4wMzIgMTI3Ljg2NyA0LjQwNCAyNTUuNzM0LTMyLjU4NiAzODMuNi01MS42OTcgMTI3Ljg2Ny0xOC43NiAyNTUuNzM0LTE4Ljc2IDMxOS42NjgtMTguNzZIMTkyMFYwSDB2Mzh6Ii8+PC9nPjwvc3ZnPg==);
+  width: 100%;
+  height: 150px;
+  background-size: 100% 150px;
+}
+@media(min-width:768px){
+  .step_item:nth-of-type(2n+2)>.row{
+    flex-direction: row-reverse;
+  }
+}
+@media(max-width:767.98px){
+  .step_photo{
+    max-width: 60%;
+  }
+}
+/* _____________________ end treatment page _____________________ */
+
 @font-face {
   font-family:"Heebo", sans-serif;
   src: url("../fonts/Heebo.ttf");
